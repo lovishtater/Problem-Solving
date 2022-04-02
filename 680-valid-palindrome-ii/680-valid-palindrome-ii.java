@@ -12,29 +12,20 @@ class Solution {
             } else if (s.charAt(i+1) == s.charAt(j)&& !flag){
                 flag = true;
                 i++;
-            } 
-            // else if (s.charAt(i) == s.charAt(j-1) && !flag){
-            //     flag = true;
-            //     j--;
-            // }
-            else{
+            } else{
                 ans1 = false;
                 j--;
             }
         }
+        
         i=0;
         j = s.length()-1;
         flag = false;
-                while( i<j){
+        while( i<j){
             if (s.charAt(i) == s.charAt(j)){
                 i++;
                 j--;
-            } 
-            //         else if (s.charAt(i+1) == s.charAt(j)&& !flag){
-            //     flag = true;
-            //     i++;
-            // } 
-                    else if (s.charAt(i) == s.charAt(j-1) && !flag){
+            } else if (s.charAt(i) == s.charAt(j-1) && !flag){
                 flag = true;
                 j--;
             }
@@ -43,7 +34,7 @@ class Solution {
                 ans2 = false;
             }
         }
-        System.out.println(ans1 + " " + ans2);
+        // System.out.println(ans1 + " " + ans2);
         return (ans1 || ans2);
     }
 }
