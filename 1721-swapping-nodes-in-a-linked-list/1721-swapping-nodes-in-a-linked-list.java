@@ -18,7 +18,7 @@ class Solution {
         }
         ListNode temp = head;
         int size = 1;
-        while(temp.next != null){
+        while(temp.next != null){                                     
             temp = temp.next;
             size++;
         }
@@ -34,8 +34,8 @@ class Solution {
             second = second.next;
         }
         int firstVal= first.val;
-        int secondVal = second.val;
-        first.val = secondVal;
+        // int secondVal = second.val;
+        first.val = second.val;;
         second.val= firstVal;
         return head;
     }
