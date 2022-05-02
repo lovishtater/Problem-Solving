@@ -5,17 +5,11 @@ class Solution {
         while(i<j){
             if (nums[j]%2!=0){
                 j--;
-            }else if (nums[i]%2!=0 && nums[j]%2==0){
+            }else {
                 int temp = nums[i];
                 nums[i] = nums[j];
-                nums[j]= temp;
-            }
-            if (nums[i]%2==0){
+                nums[j] = temp;
                 i++;
-            }else if (nums[i]%2 != 0 && nums[j]%2==0){
-                int temp = nums[i];
-                nums[i] = nums[j];
-                nums[j]= temp;
             }
         }
         return nums;
